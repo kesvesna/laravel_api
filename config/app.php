@@ -80,7 +80,11 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
+    'locales' => [
+        'en',
+        'ru'
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -175,7 +179,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Lavary\Menu\ServiceProvider::class,
+
+        //my providers
         \App\Providers\ModularProvider::class,
+        \App\Services\Localization\LocalizationServiceProvider::class,
 
     ],
 
@@ -231,6 +239,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Menu' => Lavary\Menu\Facade::class,
 
     ],
 
